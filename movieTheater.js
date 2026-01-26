@@ -71,6 +71,7 @@ function part_2(coords){
         }
 
         const vEdges = verticalEdgesByX.get(x);
+
         if(vEdges){
             for(const edge of vEdges){
                 if(y < edge.minY){
@@ -157,9 +158,9 @@ function part_2(coords){
     return maxArea;
 }
 
-const lines = fs.readFileSync("input-15.txt", "utf-8")
+const lines = fs.readFileSync("input-16.txt", "utf-8")
     .split("\n")
-    .filter(line => line.trim() !== "");;
+    .filter(line => line.trim() !== "");
 
 let ans = part_1(lines.map(line => {
         const [x, y] = line.split(",").map(Number);
